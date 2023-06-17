@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Users\ludiv\OneDrive\Documentos\01 - UNICAMP\02 - Matérias\01 - MC322\Projeto Final\.metadata\.plugins\org.eclipse.jdt.core
+2103987782.index
+4292351285.index
+1865797976.index

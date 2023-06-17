@@ -1,0 +1,19 @@
+package PDV.enum;
+
+import types.JFrame;
+import java.util.Collection;
+import PDV.models.Funcionario;
+
+public interface Acesso {
+
+	private Integer id;
+
+	private String acao;
+
+	private JFrame pagina;
+
+	private Collection<Funcionario> funcionario;
+
+	private Funcionario funcionario;
+
+}

@@ -1,0 +1,32 @@
+package PDV.enum;
+
+import types.JFrame;
+
+public enum Ler implements Acesso {
+
+	;
+
+	/**
+	 *  
+	 */
+	public CLIENTE(int 0, int "Ler CLIENTE", JFrame frame) {
+
+	}
+
+	public PRODUTO(int 2, int "Ler PRODUTO", JFrame frame) {
+
+	}
+
+	public FORNECEDOR(int 3, int "Ler FORNECEDOR", JFrame frame) {
+
+	}
+
+	public FUNCIONARIO(int 0, int "Ler FUNCIONARIO", JFrame frame) {
+
+	}
+
+	public VENDA(int 0, int "Ler VENDA", JFrame frame) {
+
+	}
+
+}

@@ -1,0 +1,37 @@
+package unicamp.ic.mc322.model;
+
+import java.util.ArrayList;
+
+public class Funcionario {
+
+	private final String cpf;
+
+	private String nome;
+
+	private String email;
+
+	private String telefone;
+
+	private String endereco;
+
+	private Filial filial;
+
+	private ArrayList<Acesso> listaAcessos;
+
+	private ArrayList<Venda> listaVendas;
+
+
+	public Funcionario(String cpfString, String nomeString, String emailString, String telefoneString, String enderecoString, Filial objFilial) {
+		this.cpf = cpfString;
+		this.nome = nomeString;
+		this.email = emailString;
+		this.telefone = telefoneString;
+		this.endereco = enderecoString;
+		this.filial = objFilial;
+	}
+	
+	public ArrayList<Venda> vendasPorMes() {
+		return null;
+	}
+
+}

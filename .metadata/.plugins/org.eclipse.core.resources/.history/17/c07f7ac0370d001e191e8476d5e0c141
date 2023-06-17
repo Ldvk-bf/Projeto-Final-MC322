@@ -1,0 +1,32 @@
+package PDV.models;
+
+import java.util.Collection;
+
+public class Fornecedor {
+
+	private String cnpj;
+
+	private String nome;
+
+	private String email;
+
+	private String telefone;
+
+	private String endereco;
+
+	private int attribute13;
+
+	private Collection<Filial> filial;
+
+	private Produto produto;
+
+	private Filial filial;
+
+	/**
+	 *  
+	 */
+	public gets/sets..() {
+
+	}
+
+}

@@ -1,0 +1,107 @@
+package unicamp.ic.mc322.model.PDV.models;
+
+
+
+import java.util.ArrayList;
+import java.util.Collection;
+
+public class Filial {
+
+	private final Integer id;
+
+	private Funcionario Dono;
+
+	private String nome;
+
+	private String endereco;
+
+	private ArrayList<Cliente> listaClientes;
+
+	private ArrayList<Funcionario> listaFuncionarios;
+
+	private ArrayList<Fornecedor> listaFornecedor;
+
+	private ArrayList<Produto> mostragem;
+
+	private ArrayList<Produto> armazem;
+
+	private Collection<Fornecedor> fornecedor;
+
+	private Empresa empresa;
+
+	private Collection<Funcionario> funcionario;
+
+	private Collection<Produto> produto;
+
+	private Venda venda;
+
+	private Venda venda;
+
+	private Collection<Fornecedor> fornecedor;
+
+	private Collection<Cliente> cliente;
+
+	/**
+	 *  
+	 */
+	public gets/sets...() {
+
+	}
+
+	public Boolean addFuncionario(Funcionario objFuncionario) {
+		return null;
+	}
+
+	public Venda gerarVenda() {
+		return null;
+	}
+
+	public ArrayList<Funcionario> listarFuncionario() {
+		return null;
+	}
+
+	public ArrayList<Cliente> listarClientes() {
+		return null;
+	}
+
+	public ArrayList<Fornecedor> listarFornecedores() {
+		return null;
+	}
+
+	public ArrayList<Produto> listarProdutos() {
+		return null;
+	}
+
+	public ArrayList<Produto> listarProdutosArmazem() {
+		return null;
+	}
+
+	public ArrayList<Produto> listarProdutosMostragem() {
+		return null;
+	}
+
+	public ArrayList<Venda> listarVendas() {
+		return null;
+	}
+
+	public Funcionario funcionarioDoMes(int String mes) {
+		return null;
+	}
+
+	public Double gerarFaturamento() {
+		return null;
+	}
+
+	public Double gerarFaturamentoMensal(int String mes) {
+		return null;
+	}
+
+	public Cliente clientePremiadoCNPJ() {
+		return null;
+	}
+
+	public Cliente clientePremiadoCPF() {
+		return null;
+	}
+
+}

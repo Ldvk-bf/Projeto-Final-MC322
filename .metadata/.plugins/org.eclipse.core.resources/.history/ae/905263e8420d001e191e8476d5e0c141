@@ -1,0 +1,24 @@
+package unicamp.ic.mc322.model;
+
+import javax.swing.JFrame;
+
+public enum Acesso {
+	CLIENTE_ATUALIZAR(0, "Atualizar CLIENTE"),
+	PRODUTO_ATUALIZAR(0, "Atualizar PRODUTO"),
+	FUNCIONARIO_ATUALIZAR(0, "Atualizar FUNCIONARIO"),
+	FORNECEDOR_ATUALIZAR(0, "Atualizar FORNECEDOR"),;
+
+	private Integer code;
+
+	private String acao;
+	
+	public Acesso(Intger codeInteger, String acaoString) {
+		this.code = codeInteger;
+		this.acao = acaoString;
+				
+	}
+
+	/*private JFrame pagina;*/
+
+
+}

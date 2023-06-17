@@ -1,0 +1,28 @@
+package unicamp.ic.mc322.model;
+
+public class Produto {
+
+	private Integer id;
+
+	private String nome;
+
+	private Integer quantidade;
+
+	private Double preço;
+
+	private Fornecedor fornecedor;
+
+	private Filial filial;
+
+	private Venda venda;
+
+	private Fornecedor fornecedor;
+
+	/**
+	 *  
+	 */
+	public gets/sets..() {
+
+	}
+
+}

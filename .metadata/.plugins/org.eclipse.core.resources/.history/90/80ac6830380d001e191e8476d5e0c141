@@ -1,0 +1,55 @@
+package PDV.models;
+
+import java.util.ArrayList;
+import types.LocalDate;
+
+public class Venda {
+
+	private Integer id;
+
+	private ArrayList<Produto> listaProdutos;
+
+	private Cliente cliente;
+
+	private Funcionario atendente;
+
+	private LocalDate data;
+
+	private Cliente cliente;
+
+	private Cliente cliente;
+
+	private Venda venda;
+
+	private Venda venda;
+
+	private Cliente cliente;
+
+	private Funcionario funcionario;
+
+	private Filial filial;
+
+	private Filial filial;
+
+	private Cliente cliente;
+
+	private Cliente cliente;
+
+	private Produto produto;
+
+	/**
+	 *  
+	 */
+	public gets/sets..() {
+
+	}
+
+	public Double calcDesconto() {
+		return null;
+	}
+
+	public Double calcPreco() {
+		return null;
+	}
+
+}

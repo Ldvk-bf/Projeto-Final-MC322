@@ -1,0 +1,45 @@
+package PDV.enum;
+
+import types.JFrame;
+
+public enum Criar implements Acesso {
+
+	;
+
+	/**
+	 *  
+	 *  
+	 */
+	public CLIENTE(int 0, int "Criar CLIENTE", JFrame frame) {
+
+	}
+
+	/**
+	 *  
+	 */
+	public PRODUTO(int 1, int "Criar PRODUTO", JFrame frame) {
+
+	}
+
+	/**
+	 *  
+	 */
+	public FORNECEDOR(int 2, int "Criar FORNECEDOR", JFrame frame) {
+
+	}
+
+	/**
+	 *  
+	 */
+	public FUNCIONARIO(int 3, int "Criar FUNCIONARIO", JFrame frame) {
+
+	}
+
+	/**
+	 *  
+	 */
+	public void VENDA(int 4, int "Criar VENDA", JFrame frame) {
+
+	}
+
+}

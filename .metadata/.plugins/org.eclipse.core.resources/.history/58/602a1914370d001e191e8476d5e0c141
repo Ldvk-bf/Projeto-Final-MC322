@@ -1,0 +1,25 @@
+package unicamp.ic.mc322.model.PDV.models;
+
+
+import java.util.ArrayList;
+import java.util.Collection;
+
+public class Cliente {
+
+	private String cadastroPessoa;
+
+	private String nome;
+
+	private String email;
+
+	private String telefone;
+
+	private String endereco;
+
+	private ArrayList<Venda> listaCompras;
+
+	public Double gastoTotal() {
+		return null;
+	}
+
+}

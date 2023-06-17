@@ -1,0 +1,16 @@
+package unicamp.ic.mc322.model;
+
+import javax.swing.JFrame;
+
+public enum Acesso {
+	CLIENTE(int 0, int "Atualizar CLIENTE", JFrame frame);
+
+	private Integer code;
+
+	private String acao;
+
+	private JFrame pagina;
+
+	private Funcionario funcionario;
+
+}

@@ -1,0 +1,20 @@
+package unicamp.ic.mc322.model;
+
+public class Produto {
+
+	private Integer id;
+
+	private String nome;
+
+	private Integer quantidade;
+
+	private Double preço;
+
+	private Fornecedor fornecedor;
+
+	private Filial filial;
+	public Produto(Integer idInteger, String nomeString, Integer quantidadeInteger, Double precoDouble, Fornecedor objFornecedor, Filial objFilial, ) {
+		// TODO Auto-generated constructor stub
+	}
+
+}
