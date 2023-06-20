@@ -16,6 +16,14 @@ public class Cliente {
 	private String endereco;
 
 	private ArrayList<Venda> listaCompras;
+	
+	public Cliente(String cadastroPessoa, String nome, String email, String telefone, String endereco) {
+		this.cadastroPessoa = cadastroPessoa;
+		this.nome = nome;
+		this.email = email;
+		this.telefone = telefone;
+		this.endereco  = endereco;
+	}
 
 	public Double gastoTotal() {
 		return null;

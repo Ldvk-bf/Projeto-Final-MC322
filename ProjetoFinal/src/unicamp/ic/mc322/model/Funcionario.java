@@ -30,7 +30,7 @@ public class Funcionario {
 		this.filial = objFilial;
 	}
 	
-	public ArrayList<Venda> vendasPorMes() {
+	public ArrayList<Venda> vendasPorMes(String mes) {
 		return null;
 	}
 

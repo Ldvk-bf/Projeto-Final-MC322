@@ -19,6 +19,8 @@ public class Venda {
 	private Funcionario funcionario;
 
 	private Produto produto;
+	
+	private Filial filial;
 
 
 	public Double calcDesconto() {
