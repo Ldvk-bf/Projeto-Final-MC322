@@ -155,7 +155,7 @@ public class Filial {
 	
 	public Cliente clientePremiadoCPF(String mes) {
 		int somaVendas = 0;
-		Cliente clienteDoMes = new Cliente(null, null, null, null, null);
+		Cliente clienteDoMes = null;
 		for(int i = 0; i < listaClientes.size();i++) {
 			if(somaVendas < listaClientes.get(i).getListaCompras().size()) {
 				somaVendas = listaClientes.get(i).getListaCompras().size();
