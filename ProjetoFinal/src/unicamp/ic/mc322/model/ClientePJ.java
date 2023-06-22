@@ -30,13 +30,13 @@ public class ClientePJ extends Cliente{
 	}
 
     public double desconto(){
-        if(5 <= super.qntdCompras && super.qntdCompras< 15){
+        if(5 <= qntdCompras() && qntdCompras() < 15){
             return Desconto.atacado.getPorcentagem() + Desconto.fator_5_15.getPorcentagem();
         }
-        else if (15 <= super.qntdCompras && super.qntdCompras< 20){
+        else if (15 <= qntdCompras() && super.qntdCompras() < 20){
             return Desconto.atacado.getPorcentagem() + Desconto.fator_15_20.getPorcentagem();
         }
-        else if (20 <= super.qntdCompras){
+        else if (20 <= qntdCompras()){
             return Desconto.atacado.getPorcentagem() + Desconto.fator_20.getPorcentagem();
         }
         else{

@@ -9,26 +9,16 @@ abstract class Cliente {
 
 	private ArrayList<Venda> listaCompras;
 
-	protected int qntdCompras;
-
 	Cliente(String cadastroPessoa , String nome){
 		this.cadastroPessoa = cadastroPessoa;
 		this.nome = nome;
 		listaCompras = new ArrayList<>();
-		qntdCompras = 0;
 	}
 
-	public void AddqntdCompras() {
-		setQntdCompras(qntdCompras + 1);
+	public int qntdCompras() {
+		return listaCompras.size();
 	}
 
-	public int getQntdCompras() {
-		return qntdCompras;
-	}
-
-	public void setQntdCompras(int qntdCompras) {
-		this.qntdCompras = qntdCompras;
-	}
 
 	public String getCadastroPessoa() {
 		return cadastroPessoa;
