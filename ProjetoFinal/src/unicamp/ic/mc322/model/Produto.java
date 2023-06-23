@@ -8,15 +8,18 @@ public class Produto {
 
 	private Integer quantidade;
 
-	private Double preco;
+	private Double precoVenda;
+
+	private Double precoCompra;
 
 	private Fornecedor fornecedor;
 	
-	public Produto(Integer idInteger, String nomeString, Integer quantidadeInteger, Double precoDouble, Fornecedor objFornecedor) {
+	public Produto(Integer idInteger, String nomeString, Integer quantidadeInteger, Double precoVenda, Double precoCompra, Fornecedor objFornecedor) {
 		this.id = idInteger;
 		this.nome = nomeString;
 		this.quantidade = quantidadeInteger;
-		this.preco = precoDouble;
+		this.precoVenda = precoVenda;
+		this.precoCompra = precoCompra;
 		this.fornecedor = objFornecedor;
 	}
 
@@ -44,12 +47,20 @@ public class Produto {
 		this.quantidade = quantidade;
 	}
 
-	public Double getPreco() {
-		return preco;
+	public Double getPrecoVenda() {
+		return precoVenda;
 	}
 
-	public void setPreco(Double preco) {
-		this.preco = preco;
+	public Double getPrecoCompra() {
+		return precoCompra;
+	}
+
+	public void setPrecoVenda(Double preco) {
+		this.precoVenda = preco;
+	}
+
+	public void setprecoCompra(Double preco) {
+		this.precoVenda = preco;
 	}
 
 	public Fornecedor getFornecedor() {

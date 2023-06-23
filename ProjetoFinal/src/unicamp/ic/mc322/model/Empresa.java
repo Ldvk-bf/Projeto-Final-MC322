@@ -17,42 +17,96 @@ public class Empresa {
 
 
 	public Boolean criarFilial(Filial objFilial) {
-		return null;
+		boolean flag = false;
+
+		if(!listaFiliais.contains(objFilial)){
+
+			listaFiliais.add( objFilial);
+			flag = true;
+		}
+		return flag;//retorna falso caso ja exista uma filial na lista
 	}
 
-	/**
-	 *  
-	 */
-	public void excluirFilial() {
+	public boolean excluirFilial(Filial objFilial) {
+		boolean flag = false;
 
+		if(listaFiliais.contains(objFilial)){
+			listaFiliais.remove(objFilial);
+			flag = true;
+		}
+		return flag;//retorna falso caso nao exista uma filial na lista
 	}
 
 	public ArrayList<Cliente> listarClientes() {
-		return null;
+		
+		ArrayList <Cliente> listadeClient = new ArrayList<>();
+		for(Cliente cliente : cliente){
+			listadeClient.add(cliente);
+		}
+		return listadeClient;
 	}
 
 	public ArrayList<Filial> listarFiliais() {
-		return null;
+		return listaFiliais;
 	}
 
+
 	public ArrayList<Funcionario> listarFuncionarios() {
-		return null;
+		//cria uma mega lista com todos os funcionarios de cada filial 
+		ArrayList <Funcionario> listaFuncionarios = new ArrayList<>();
+		for(Filial filial : this.listaFiliais){
+			listaFuncionarios.addAll(filial.getListaFuncionarios());
+		}
+		return listaFuncionarios;
 	}
 
 	public ArrayList<Venda> listarVendas() {
-		return null;
+		//cria uma mega lista com todas as vendas de cada filial 
+		ArrayList <Venda> listaVendas = new ArrayList<>();
+		for(Filial filial : this.listaFiliais){
+			listaVendas.addAll(filial.listarVendas());
+		}
+		return listaVendas;
 	}
 
 	public ArrayList<Fornecedor> listarFornecedores() {
-		return null;
+		
+		ArrayList <Fornecedor> listaFornecedores = new ArrayList<>();
+		for(Filial filial : this.listaFiliais){
+			listaFornecedores.addAll(filial.listarFornecedores());
+		}
+		return listaFornecedores;
+
 	}
 
 	public ArrayList<Produto> listarProdutos() {
-		return null;
+
+		ArrayList <Produto> listaProdutos = new ArrayList<>();
+		for(Filial filial : this.listaFiliais){
+			listaProdutos.addAll(filial.listarProdutos());
+		}
+		return listaProdutos;
+
 	}
 
-	public Double gerarFaturarmento() {
-		return null;
+	public Double gerarFaturamento() {
+		
+		Double faturamento = 0.0;
+
+		for(Filial filial : this.listaFiliais){
+			faturamento += filial.gerarFaturamento();
+		}
+		return faturamento;
+	}
+
+	public Double gerarFaturarmentoMensal(String mes) {
+		
+		Double faturamentoMensal = 0.0;
+
+		for(Filial filial : this.listaFiliais){
+			faturamentoMensal += filial.gerarFaturamentoMensal(mes);
+		}
+		return faturamentoMensal;
 	}
 
 	public String getCnpj() {
