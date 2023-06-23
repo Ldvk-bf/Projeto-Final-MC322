@@ -2,7 +2,7 @@ package unicamp.ic.mc322.model;
 
 import java.util.ArrayList;
 
-public class Funcionario {
+public abstract class Funcionario {
 
 	private final String cpf;
 
@@ -20,8 +20,8 @@ public class Funcionario {
 
 	private ArrayList<Venda> listaVendas;
 
-
-	public Funcionario(String cpfString, String nomeString, String emailString, String telefoneString, String enderecoString, Filial objFilial) {
+	public Funcionario(String cpfString, String nomeString, String emailString,
+			String telefoneString, String enderecoString, Filial objFilial) {
 		this.cpf = cpfString;
 		this.nome = nomeString;
 		this.email = emailString;
@@ -29,7 +29,9 @@ public class Funcionario {
 		this.endereco = enderecoString;
 		this.filial = objFilial;
 	}
-	
+
+	public abstract Double pontuacao();
+
 	public ArrayList<Venda> vendasPorMes(String mes) {
 		return null;
 	}
