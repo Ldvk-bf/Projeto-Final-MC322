@@ -15,32 +15,31 @@ public class Empresa {
 
 	private Collection<Filial> filial;
 
-
 	public Boolean criarFilial(Filial objFilial) {
 		boolean flag = false;
 
-		if(!listaFiliais.contains(objFilial)){
+		if (!listaFiliais.contains(objFilial)) {
 
-			listaFiliais.add( objFilial);
+			listaFiliais.add(objFilial);
 			flag = true;
 		}
-		return flag;//retorna falso caso ja exista uma filial na lista
+		return flag;// retorna falso caso ja exista uma filial na lista
 	}
 
 	public boolean excluirFilial(Filial objFilial) {
 		boolean flag = false;
 
-		if(listaFiliais.contains(objFilial)){
+		if (listaFiliais.contains(objFilial)) {
 			listaFiliais.remove(objFilial);
 			flag = true;
 		}
-		return flag;//retorna falso caso nao exista uma filial na lista
+		return flag;// retorna falso caso nao exista uma filial na lista
 	}
 
 	public ArrayList<Cliente> listarClientes() {
-		
-		ArrayList <Cliente> listadeClient = new ArrayList<>();
-		for(Cliente cliente : cliente){
+
+		ArrayList<Cliente> listadeClient = new ArrayList<>();
+		for (Cliente cliente : cliente) {
 			listadeClient.add(cliente);
 		}
 		return listadeClient;
@@ -50,29 +49,28 @@ public class Empresa {
 		return listaFiliais;
 	}
 
-
 	public ArrayList<Funcionario> listarFuncionarios() {
-		//cria uma mega lista com todos os funcionarios de cada filial 
-		ArrayList <Funcionario> listaFuncionarios = new ArrayList<>();
-		for(Filial filial : this.listaFiliais){
-			listaFuncionarios.addAll(filial.getListaFuncionarios());
+		// cria uma mega lista com todos os funcionarios de cada filial
+		ArrayList<Funcionario> listaFuncionarios = new ArrayList<>();
+		for (Filial filial : this.listaFiliais) {
+			listaFuncionarios.addAll(filial.listarFuncionario());
 		}
 		return listaFuncionarios;
 	}
 
 	public ArrayList<Venda> listarVendas() {
-		//cria uma mega lista com todas as vendas de cada filial 
-		ArrayList <Venda> listaVendas = new ArrayList<>();
-		for(Filial filial : this.listaFiliais){
+		// cria uma mega lista com todas as vendas de cada filial
+		ArrayList<Venda> listaVendas = new ArrayList<>();
+		for (Filial filial : this.listaFiliais) {
 			listaVendas.addAll(filial.listarVendas());
 		}
 		return listaVendas;
 	}
 
 	public ArrayList<Fornecedor> listarFornecedores() {
-		
-		ArrayList <Fornecedor> listaFornecedores = new ArrayList<>();
-		for(Filial filial : this.listaFiliais){
+
+		ArrayList<Fornecedor> listaFornecedores = new ArrayList<>();
+		for (Filial filial : this.listaFiliais) {
 			listaFornecedores.addAll(filial.listarFornecedores());
 		}
 		return listaFornecedores;
@@ -81,8 +79,8 @@ public class Empresa {
 
 	public ArrayList<Produto> listarProdutos() {
 
-		ArrayList <Produto> listaProdutos = new ArrayList<>();
-		for(Filial filial : this.listaFiliais){
+		ArrayList<Produto> listaProdutos = new ArrayList<>();
+		for (Filial filial : this.listaFiliais) {
 			listaProdutos.addAll(filial.listarProdutos());
 		}
 		return listaProdutos;
@@ -90,20 +88,20 @@ public class Empresa {
 	}
 
 	public Double gerarFaturamento() {
-		
+
 		Double faturamento = 0.0;
 
-		for(Filial filial : this.listaFiliais){
+		for (Filial filial : this.listaFiliais) {
 			faturamento += filial.gerarFaturamento();
 		}
 		return faturamento;
 	}
 
 	public Double gerarFaturarmentoMensal(String mes) {
-		
+
 		Double faturamentoMensal = 0.0;
 
-		for(Filial filial : this.listaFiliais){
+		for (Filial filial : this.listaFiliais) {
 			faturamentoMensal += filial.gerarFaturamentoMensal(mes);
 		}
 		return faturamentoMensal;

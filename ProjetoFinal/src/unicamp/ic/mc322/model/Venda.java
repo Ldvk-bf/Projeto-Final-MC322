@@ -1,4 +1,5 @@
 package unicamp.ic.mc322.model;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import unicamp.ic.mc322.util.Util;
@@ -17,7 +18,7 @@ public class Venda {
 
 	private Filial filial;
 
-	Venda(Funcionario atendente , LocalDate data , Cliente cliente , Filial filial){
+	Venda(Funcionario atendente, LocalDate data, Cliente cliente, Filial filial) {
 		id = Util.criarId();
 		this.atendente = atendente;
 		this.data = data;
@@ -26,11 +27,10 @@ public class Venda {
 		this.filial = filial;
 	}
 
-
-	public  Double calcPreco() {
+	public Double calcPreco() {
 		double preco = 0;
-		for (int k = 0 ; k < listaProdutos.size() ; k++){
-			preco += listaProdutos.get(k).getPreco();
+		for (int k = 0; k < listaProdutos.size(); k++) {
+			preco += listaProdutos.get(k).getPrecoVenda();
 		}
 		preco = preco - preco * cliente.desconto();
 		return preco;
@@ -44,11 +44,11 @@ public class Venda {
 		return listaProdutos;
 	}
 
-	public Filial getFilial(){
+	public Filial getFilial() {
 		return filial;
 	}
 
-	public void setFilial(Filial filial){
+	public void setFilial(Filial filial) {
 		this.filial = filial;
 	}
 
