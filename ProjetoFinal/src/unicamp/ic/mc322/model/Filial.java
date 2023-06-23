@@ -20,12 +20,13 @@ public class Filial {
 	private ArrayList<Funcionario> listaFuncionarios;
 
 	private ArrayList<Fornecedor> listaFornecedor;
+	
+	private ArrayList<Venda> listaVendas;
 
 	private ArrayList<Produto> mostragem;
 
 	private ArrayList<Produto> armazem;
 	
-	private ArrayList<Venda> listaVendas;
 	
 	public Filial(Funcionario dono , String nome , String endereco) {
 		this.Dono = dono;
@@ -39,132 +40,7 @@ public class Filial {
 		armazem = new ArrayList<>();
 		listaVendas = new ArrayList<>();
 	}
-
-
-	public Boolean addFuncionario(Funcionario objFuncionario) {
-		if(listaFuncionarios.contains(objFuncionario)) {
-			return false;
-		}
-		else {
-			listaFuncionarios.add(objFuncionario);
-			return true;
-		}
-	}
-
-	public Boolean gerarVenda(Venda venda) {
-		if(listaVendas.contains(venda)) {
-			return false;
-		}
-		else {
-			listaVendas.add(venda);
-			return true;
-		}
-	}
-
-	public ArrayList<Funcionario> listarFuncionario() {
-		ArrayList <Funcionario> listFunc = new ArrayList<>();
-		for(int i = 0; i < listaFuncionarios.size();i++) {
-			listFunc.add(listaFuncionarios.get(i));
-		}
-		return listFunc;
-	}
-
-	public ArrayList<Cliente> listarClientes() {
-		ArrayList <Cliente> listClients = new ArrayList<>();
-		for(int i = 0; i < listaClientes.size();i++) {
-			listClients.add(listaClientes.get(i));
-		}
-		return listClients;
-	}
-
-	public ArrayList<Fornecedor> listarFornecedores() {
-		ArrayList <Fornecedor> listFornecedores = new ArrayList<>();
-		for(int i = 0; i < listaFornecedor.size();i++) {
-			listFornecedores.add(listaFornecedor.get(i));
-		}
-		return listFornecedores;
-	}
-
-	public ArrayList<Produto> listarProdutos() {
-		ArrayList <Produto> listProducts = new ArrayList<>();
-		for(int i = 0; i < armazem.size();i++) {
-			listProducts.add(armazem.get(i));
-		}
-		for(int i = 0; i < mostragem.size();i++) {
-			listProducts.add(mostragem.get(i));
-		}
-		return listProducts;
-	}
-
-	public ArrayList<Produto> listarProdutosArmazem() {
-		ArrayList <Produto> listProductArmazem = new ArrayList<>();
-		for(int i = 0; i < armazem.size();i++) {
-			listProductArmazem.add(armazem.get(i));
-		}
-		return listProductArmazem;
-	}
-
-	public ArrayList<Produto> listarProdutosMostragem() {
-		ArrayList <Produto> listProductMostragem = new ArrayList<>();
-		for(int i = 0; i < mostragem.size();i++) {
-			listProductMostragem.add(mostragem.get(i));
-		}
-		return listProductMostragem;
-	}
-
-	public ArrayList<Venda> listarVendas() {
-		return listaVendas;
-	}
-
-	public Funcionario funcionarioDoMes(String mes) {
-		int somaVendas = 0;
-		Funcionario funcOfMonth = new Funcionario(null, null, null, null, null, null);
-		for(int i = 0; i < listaFuncionarios.size();i++) {
-			if(somaVendas < listaFuncionarios.get(i).vendasPorMes(mes).size()) {
-				somaVendas = listaFuncionarios.get(i).vendasPorMes(mes).size();
-				funcOfMonth = listaFuncionarios.get(i);
-			}
-		}
-		return funcOfMonth;
-	}
-
-	public Double gerarFaturamento() {
-		double faturamento = 0.0;
-		for(int k = 0; k < listaVendas.size();k++) {
-			faturamento += listaVendas.get(k).calcPreco();
-		}
-		return faturamento;
-	}
-
-	public Double gerarFaturamentoMensal(String mes) {
-		double faturamento = 0.0;
-		ArrayList <Venda> listVendas = new ArrayList<>();
-		ArrayList <Venda> listVendasFinal = new ArrayList<>();
-		for(int i = 0; i < listaFuncionarios.size();i++) {
-			listVendas = listaFuncionarios.get(i).vendasPorMes(mes);
-			for(int j = 0; j < listVendas.size();i++) {
-				listVendasFinal.add(listVendas.get(j));
-			}
-		}
-		for(int k = 0; k < listVendasFinal.size();k++) {
-			faturamento += listVendasFinal.get(k).calcPreco();
-		}
-		return faturamento;
-	}
-
 	
-	public Cliente clientePremiadoCPF(String mes) {
-		int somaVendas = 0;
-		Cliente clienteDoMes = null;
-		for(int i = 0; i < listaClientes.size();i++) {
-			if(somaVendas < listaClientes.get(i).getListaCompras().size()) {
-				somaVendas = listaClientes.get(i).getListaCompras().size();
-				clienteDoMes  = listaClientes.get(i);
-			}
-		}
-		return clienteDoMes;
-	}
-
 	public Funcionario getDono() {
 		return Dono;
 	}
@@ -189,41 +65,25 @@ public class Filial {
 		this.endereco = endereco;
 	}
 
-	public ArrayList<Cliente> getListaClientes() {
-		return listaClientes;
-	}
-
+	
 	public void setListaClientes(ArrayList<Cliente> listaClientes) {
 		this.listaClientes = listaClientes;
 	}
 
-	public ArrayList<Funcionario> getListaFuncionarios() {
-		return listaFuncionarios;
-	}
 
 	public void setListaFuncionarios(ArrayList<Funcionario> listaFuncionarios) {
 		this.listaFuncionarios = listaFuncionarios;
-	}
-
-	public ArrayList<Fornecedor> getListaFornecedor() {
-		return listaFornecedor;
 	}
 
 	public void setListaFornecedor(ArrayList<Fornecedor> listaFornecedor) {
 		this.listaFornecedor = listaFornecedor;
 	}
 
-	public ArrayList<Produto> getMostragem() {
-		return mostragem;
-	}
 
 	public void setMostragem(ArrayList<Produto> mostragem) {
 		this.mostragem = mostragem;
 	}
 
-	public ArrayList<Produto> getArmazem() {
-		return armazem;
-	}
 
 	public void setArmazem(ArrayList<Produto> armazem) {
 		this.armazem = armazem;
@@ -237,4 +97,138 @@ public class Filial {
 		this.listaVendas = listaVendas;
 	}
 
+
+	//Adiciona um funcionário na lista de funcionários da filial
+	public Boolean addFuncionario(Funcionario objFuncionario) {
+		if(listaFuncionarios.contains(objFuncionario)) {
+			return false;
+		}
+		else {
+			listaFuncionarios.add(objFuncionario);
+			return true;
+		}
+	}
+
+	//Adiciona uma venda na lista de vendas da filial
+	public Boolean gerarVenda(Venda venda) {
+		if(listaVendas.contains(venda)) {
+			return false;
+		}
+		else {
+			listaVendas.add(venda);
+			return true;
+		}
+	}
+	
+	//Retorna a lista de Funcionários da Filial
+	public ArrayList<Funcionario> listarFuncionario() {
+		return listaFuncionarios;
+	}
+
+	//Retorna a lista de Clientes da Filial
+	public ArrayList<Cliente> listarClientes() {
+		return listaClientes;
+	}
+
+	//Retorna a lista de Fornecedores da Filial
+	public ArrayList<Fornecedor> listarFornecedores() {
+		return listaFornecedor;
+	}
+
+	//Retorna a lista de Produtos da Filial
+	public ArrayList<Produto> listarProdutos() {
+		ArrayList <Produto> listProducts = new ArrayList<>();
+		for(int i = 0; i < armazem.size();i++) {
+			listProducts.add(armazem.get(i));
+		}
+		for(int i = 0; i < mostragem.size();i++) {
+			listProducts.add(mostragem.get(i));
+		}
+		return listProducts;
+	}
+
+	//Retorna a lista de Produtos no Armazem
+	public ArrayList<Produto> listarProdutosArmazem() {
+		return armazem;
+	}
+
+	//Retorna a lista de Produtos na Mostragem
+	public ArrayList<Produto> listarProdutosMostragem() {
+		return mostragem;
+	}
+
+	//Retorna a lista de vendas da Filial
+	public ArrayList<Venda> listarVendas() {
+		return listaVendas;
+	}
+
+	//Retorna o Funcionário que mais vendeu no mês
+	public Funcionario vendedorDoMes(String mes) {
+		int somaVendas = 0;
+		Funcionario funcOfMonth = null;
+		for(int i = 0; i < listaFuncionarios.size();i++) {
+			if(somaVendas < listaFuncionarios.get(i).vendasPorMes(mes).size()) {
+				somaVendas = listaFuncionarios.get(i).vendasPorMes(mes).size();
+				funcOfMonth = listaFuncionarios.get(i);
+			}
+		}
+		return funcOfMonth;
+	}
+	
+	//Gera o faturamento da Filial
+	public Double gerarFaturamento() {
+		double faturamento = 0.0;
+		for(int k = 0; k < listaVendas.size();k++) {
+			faturamento += listaVendas.get(k).calcPreco();
+		}
+		return faturamento;
+	}
+
+	//Gera o Faturamento mensal da Filial
+	public Double gerarFaturamentoMensal(String mes) {
+		double faturamento = 0.0;
+		ArrayList <Venda> listVendas = new ArrayList<>();
+		ArrayList <Venda> listVendasFinal = new ArrayList<>();
+		for(int i = 0; i < listaFuncionarios.size();i++) {
+			listVendas = listaFuncionarios.get(i).vendasPorMes(mes);
+			for(int j = 0; j < listVendas.size();i++) {
+				listVendasFinal.add(listVendas.get(j));
+			}
+		}
+		for(int k = 0; k < listVendasFinal.size();k++) {
+			faturamento += listVendasFinal.get(k).calcPreco();
+		}
+		return faturamento;
+	}
+
+	
+	//Retorna o ClientePJ que mais comprou no mês
+	public Cliente clientePremiadoCNPJ(String mes) {
+		int somaVendas = 0;
+		Cliente clienteDoMes = null;
+		for(int i = 0; i < listaClientes.size();i++) {
+			if(somaVendas < listaClientes.get(i).getListaCompras().size() 
+			&& listaClientes.get(i).getClass() == ClientePJ.class) {
+				somaVendas = listaClientes.get(i).getListaCompras().size();
+				clienteDoMes  = listaClientes.get(i);
+			}
+		}
+		return clienteDoMes;
+	}
+	
+	//Retorna o ClientePF que mais comprou no mês
+	public Cliente clientePremiadoCPF(String mes) {
+		int somaVendas = 0;
+		Cliente clienteDoMes = null;
+		for(int i = 0; i < listaClientes.size();i++) {
+			if(somaVendas < listaClientes.get(i).getListaCompras().size() 
+			&& listaClientes.get(i).getClass() == ClientePF.class) {
+				somaVendas = listaClientes.get(i).getListaCompras().size();
+				clienteDoMes  = listaClientes.get(i);
+			}
+		}
+		return clienteDoMes;
+	}
+
+	
 }
