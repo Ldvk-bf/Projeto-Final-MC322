@@ -16,8 +16,6 @@ public abstract class Funcionario {
 
 	private Filial filial;
 
-	private ArrayList<Acesso> listaAcessos;
-
 	private ArrayList<Venda> listaVendas;
 
 	public Funcionario(String cpfString, String nomeString, String emailString,
@@ -74,14 +72,6 @@ public abstract class Funcionario {
 
 	public void setFilial(Filial filial) {
 		this.filial = filial;
-	}
-
-	public ArrayList<Acesso> getListaAcessos() {
-		return listaAcessos;
-	}
-
-	public void setListaAcessos(ArrayList<Acesso> listaAcessos) {
-		this.listaAcessos = listaAcessos;
 	}
 
 	public ArrayList<Venda> getListaVendas() {
