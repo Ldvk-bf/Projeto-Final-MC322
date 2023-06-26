@@ -1,7 +1,6 @@
 package unicamp.ic.mc322.model;
 
 import java.util.ArrayList;
-import java.util.Collection;
 
 public class Empresa {
 
@@ -9,11 +8,7 @@ public class Empresa {
 
 	private String nome;
 
-	private Funcionario Dono;
-
 	private ArrayList<Filial> listaFiliais;
-
-	private Collection<Filial> filial;
 
 	public Boolean criarFilial(Filial objFilial) {
 		boolean flag = false;
