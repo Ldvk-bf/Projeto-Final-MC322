@@ -90,22 +90,22 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="txtnome" min="-2" pref="316" max="-2" attributes="0"/>
+                                  <Component id="txtNome" min="-2" pref="316" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="txtcel2" min="-2" pref="141" max="-2" attributes="0"/>
+                                  <Component id="txtDataFund" min="-2" pref="141" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jSpinner1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="qtdFunc" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="txtend" min="-2" pref="355" max="-2" attributes="0"/>
+                                  <Component id="txtEndereco" min="-2" pref="355" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -113,7 +113,7 @@
                           <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
                           <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="txtcel1" min="-2" pref="141" max="-2" attributes="0"/>
+                          <Component id="txtCodCadast" min="-2" pref="141" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace pref="634" max="32767" attributes="0"/>
@@ -126,27 +126,27 @@
                   <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtcel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtCodCadast" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtnome" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtNome" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtend" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtEndereco" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jSpinner1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="qtdFunc" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtcel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtDataFund" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="177" max="32767" attributes="0"/>
               </Group>
@@ -170,14 +170,14 @@
             <Property name="text" type="java.lang.String" value="Quantidade de funcionarios"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtnome">
+        <Component class="javax.swing.JTextField" name="txtNome">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="14" style="0"/>
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtnomeActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNomeActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel2">
@@ -188,7 +188,7 @@
             <Property name="text" type="java.lang.String" value="C&#xf3;digo de cadastro:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtend">
+        <Component class="javax.swing.JTextField" name="txtEndereco">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="14" style="0"/>
@@ -203,7 +203,7 @@
             <Property name="text" type="java.lang.String" value="Endere&#xe7;o:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JFormattedTextField" name="txtcel1">
+        <Component class="javax.swing.JFormattedTextField" name="txtCodCadast">
           <Properties>
             <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
               <Format format="##.###.###-####/##" subtype="-1" type="5"/>
@@ -213,7 +213,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JSpinner" name="jSpinner1">
+        <Component class="javax.swing.JSpinner" name="qtdFunc">
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel11">
           <Properties>
@@ -223,7 +223,7 @@
             <Property name="text" type="java.lang.String" value="Data de funda&#xe7;&#xe3;o"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JFormattedTextField" name="txtcel2">
+        <Component class="javax.swing.JFormattedTextField" name="txtDataFund">
           <Properties>
             <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
               <Format format="##/##/####" subtype="-1" type="5"/>

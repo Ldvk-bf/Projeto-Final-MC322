@@ -127,4 +127,16 @@ public class Empresa {
 	public void setListaFiliais(ArrayList<Filial> listaFiliais) {
 		this.listaFiliais = listaFiliais;
 	}
+
+	public Fornecedor melhorFornecedor(Produto produto){
+		Fornecedor fonecedor_aux;
+		int auxiliar = 0;
+
+		//NAO IMPLEMENTADO
+
+		//retorna qual o melhor fornecedor de acordo com um produto
+		//o criterio sera o numero de produtos vendidos a empresa por determinado fornecedor
+		//precisa criar o numero de produtos vendidos
+		return null;
+	}
 }
