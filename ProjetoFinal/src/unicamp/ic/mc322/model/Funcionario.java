@@ -12,19 +12,17 @@ public abstract class Funcionario {
 
 	private String telefone;
 
-	private String endereco;
+	private String senha;
 
 	private Filial filial;
 
-	private ArrayList<Venda> listaVendas;
-
 	public Funcionario(String cpfString, String nomeString, String emailString,
-			String telefoneString, String enderecoString, Filial objFilial) {
+			String telefoneString, String enderecoString, String senha, Filial objFilial) {
 		this.cpf = cpfString;
 		this.nome = nomeString;
 		this.email = emailString;
 		this.telefone = telefoneString;
-		this.endereco = enderecoString;
+		this.senha = senha;
 		this.filial = objFilial;
 	}
 
@@ -58,14 +56,6 @@ public abstract class Funcionario {
 		this.telefone = telefone;
 	}
 
-	public String getEndereco() {
-		return endereco;
-	}
-
-	public void setEndereco(String endereco) {
-		this.endereco = endereco;
-	}
-
 	public Filial getFilial() {
 		return filial;
 	}
@@ -74,16 +64,15 @@ public abstract class Funcionario {
 		this.filial = filial;
 	}
 
-	public ArrayList<Venda> getListaVendas() {
-		return listaVendas;
-	}
-
-	public void setListaVendas(ArrayList<Venda> listaVendas) {
-		this.listaVendas = listaVendas;
-	}
-
 	public String getCpf() {
 		return cpf;
 	}
 
+	public String getSenha() {
+		return senha;
+	}
+
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
 }

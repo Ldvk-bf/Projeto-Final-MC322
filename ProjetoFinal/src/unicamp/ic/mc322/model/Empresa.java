@@ -9,9 +9,9 @@ public class Empresa {
 
 	private String nome;
 
-	private ArrayList<Filial> listaFiliais;
+	private Funcionario Dono;
 
-	private Collection<Cliente> cliente;
+	private ArrayList<Filial> listaFiliais;
 
 	private Collection<Filial> filial;
 
@@ -19,7 +19,6 @@ public class Empresa {
 		boolean flag = false;
 
 		if (!listaFiliais.contains(objFilial)) {
-
 			listaFiliais.add(objFilial);
 			flag = true;
 		}
@@ -39,8 +38,8 @@ public class Empresa {
 	public ArrayList<Cliente> listarClientes() {
 
 		ArrayList<Cliente> listadeClient = new ArrayList<>();
-		for (Cliente cliente : cliente) {
-			listadeClient.add(cliente);
+		for (Filial filial : this.listaFiliais) {
+			listadeClient.addAll(filial.listarClientes());
 		}
 		return listadeClient;
 	}
@@ -68,13 +67,11 @@ public class Empresa {
 	}
 
 	public ArrayList<Fornecedor> listarFornecedores() {
-
 		ArrayList<Fornecedor> listaFornecedores = new ArrayList<>();
 		for (Filial filial : this.listaFiliais) {
 			listaFornecedores.addAll(filial.listarFornecedores());
 		}
 		return listaFornecedores;
-
 	}
 
 	public ArrayList<Produto> listarProdutos() {
@@ -130,21 +127,4 @@ public class Empresa {
 	public void setListaFiliais(ArrayList<Filial> listaFiliais) {
 		this.listaFiliais = listaFiliais;
 	}
-
-	public Collection<Cliente> getCliente() {
-		return cliente;
-	}
-
-	public void setCliente(Collection<Cliente> cliente) {
-		this.cliente = cliente;
-	}
-
-	public Collection<Filial> getFilial() {
-		return filial;
-	}
-
-	public void setFilial(Collection<Filial> filial) {
-		this.filial = filial;
-	}
-
 }

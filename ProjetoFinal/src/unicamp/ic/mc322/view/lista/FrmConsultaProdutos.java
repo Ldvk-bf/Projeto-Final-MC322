@@ -6,7 +6,8 @@
 package unicamp.ic.mc322.view.lista;
 
 import javax.swing.JMenuItem;
-import unicamp.ic.mc322.view.JMenuFrame;
+
+import unicamp.ic.mc322.util.JMenuFrame;
 
 public class FrmConsultaProdutos extends javax.swing.JFrame {
 

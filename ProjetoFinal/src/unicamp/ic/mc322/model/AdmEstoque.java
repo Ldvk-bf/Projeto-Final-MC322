@@ -7,8 +7,8 @@ public class AdmEstoque extends Funcionario {
     private ArrayList<Produto> listaCompras = new ArrayList<>();
 
     public AdmEstoque(String cpfString, String nomeString, String emailString,
-            String telefoneString, String enderecoString, Filial objFilial) {
-        super(cpfString, nomeString, emailString, telefoneString, enderecoString, objFilial);
+            String telefoneString, String enderecoString, String senha, Filial objFilial) {
+        super(cpfString, nomeString, emailString, telefoneString, enderecoString, senha, objFilial);
     }
 
     public ArrayList<Produto> listarCompras() {

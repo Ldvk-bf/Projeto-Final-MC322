@@ -6,7 +6,8 @@
 package unicamp.ic.mc322.view.lista;
 
 import javax.swing.JMenuItem;
-import unicamp.ic.mc322.view.JMenuFrame;
+
+import unicamp.ic.mc322.util.JMenuFrame;
 
 public class FrmConsultaCliente extends javax.swing.JFrame {
 
@@ -39,12 +40,11 @@ public class FrmConsultaCliente extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         tabelaClientes = new javax.swing.JTable();
         txtpesquisa = new javax.swing.JTextField();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        tabelaClientes1 = new javax.swing.JTable();
         jLabel2 = new javax.swing.JLabel();
         btnPesquisar = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -57,7 +57,7 @@ public class FrmConsultaCliente extends javax.swing.JFrame {
 
                 },
                 new String[] {
-                        "Cad. de pessoa", "Nome", "Email", "Telefone", "Endereço"
+                        "Cad. de pessoa", "Nome"
                 }));
         tabelaClientes.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -72,21 +72,6 @@ public class FrmConsultaCliente extends javax.swing.JFrame {
                 txtpesquisaKeyPressed(evt);
             }
         });
-
-        tabelaClientes1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        tabelaClientes1.setModel(new javax.swing.table.DefaultTableModel(
-                new Object[][] {
-
-                },
-                new String[] {
-                        "Cad. de pessoa", "Nome", "Data Fundação", "Qntd Funcionario"
-                }));
-        tabelaClientes1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                tabelaClientes1MouseClicked(evt);
-            }
-        });
-        jScrollPane2.setViewportView(tabelaClientes1);
 
         jLabel2.setText("Cadastro de pessoa");
 
@@ -103,13 +88,6 @@ public class FrmConsultaCliente extends javax.swing.JFrame {
         jPanel4Layout.setHorizontalGroup(
                 jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 458,
-                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 489, Short.MAX_VALUE)
-                                .addContainerGap())
-                        .addGroup(jPanel4Layout.createSequentialGroup()
                                 .addGap(25, 25, 25)
                                 .addComponent(jLabel2)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -118,7 +96,11 @@ public class FrmConsultaCliente extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(btnPesquisar, javax.swing.GroupLayout.PREFERRED_SIZE, 108,
                                         javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
+                                .addContainerGap(390, Short.MAX_VALUE))
+                        .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jScrollPane1)
+                                .addContainerGap()));
         jPanel4Layout.setVerticalGroup(
                 jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanel4Layout.createSequentialGroup()
@@ -130,11 +112,7 @@ public class FrmConsultaCliente extends javax.swing.JFrame {
                                         .addComponent(jLabel2)
                                         .addComponent(btnPesquisar))
                                 .addGap(30, 30, 30)
-                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 272,
-                                                Short.MAX_VALUE)
-                                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0,
-                                                Short.MAX_VALUE))
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 272, Short.MAX_VALUE)
                                 .addContainerGap()));
 
         jPanel1.setBackground(new java.awt.Color(217, 217, 217));
@@ -158,6 +136,9 @@ public class FrmConsultaCliente extends javax.swing.JFrame {
                                 .addComponent(jLabel1)
                                 .addContainerGap(20, Short.MAX_VALUE)));
 
+        jLabel3.setForeground(new java.awt.Color(255, 51, 51));
+        jLabel3.setText("OBS: Clique na linha para selecioná-lo");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -165,6 +146,10 @@ public class FrmConsultaCliente extends javax.swing.JFrame {
                         .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING,
                                 javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE,
                                 Short.MAX_VALUE)
+                        .addGroup(layout.createSequentialGroup()
+                                .addGap(46, 46, 46)
+                                .addComponent(jLabel3)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(layout.createSequentialGroup()
                                         .addGap(0, 16, Short.MAX_VALUE)
@@ -177,7 +162,10 @@ public class FrmConsultaCliente extends javax.swing.JFrame {
                         .addGroup(layout.createSequentialGroup()
                                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE,
                                         javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(532, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 470,
+                                        Short.MAX_VALUE)
+                                .addComponent(jLabel3)
+                                .addGap(46, 46, 46))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(layout.createSequentialGroup()
                                         .addGap(0, 114, Short.MAX_VALUE)
@@ -200,10 +188,6 @@ public class FrmConsultaCliente extends javax.swing.JFrame {
     private void btnPesquisarActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btnPesquisarActionPerformed
 
     }// GEN-LAST:event_btnPesquisarActionPerformed
-
-    private void tabelaClientes1MouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_tabelaClientes1MouseClicked
-        // TODO add your handling code here:
-    }// GEN-LAST:event_tabelaClientes1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -252,12 +236,11 @@ public class FrmConsultaCliente extends javax.swing.JFrame {
     private javax.swing.JButton btnPesquisar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable tabelaClientes;
-    private javax.swing.JTable tabelaClientes1;
     private javax.swing.JTextField txtpesquisa;
     // End of variables declaration//GEN-END:variables
 }

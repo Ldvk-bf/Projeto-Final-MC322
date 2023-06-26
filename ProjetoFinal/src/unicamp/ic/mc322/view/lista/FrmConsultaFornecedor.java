@@ -5,9 +5,9 @@
  */
 package unicamp.ic.mc322.view.lista;
 
+import unicamp.ic.mc322.util.JMenuFrame;
 import unicamp.ic.mc322.view.cadastro.FrmCadastroFornecedor;
 import javax.swing.JMenuItem;
-import unicamp.ic.mc322.view.JMenuFrame;
 
 public class FrmConsultaFornecedor extends javax.swing.JFrame {
 

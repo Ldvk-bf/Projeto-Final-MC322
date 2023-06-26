@@ -7,14 +7,9 @@ public class Gerente extends Funcionario {
     private ArrayList<Venda> listaFuncionario = new ArrayList<>();
 
     public Gerente(String cpfString, String nomeString, String emailString,
-            String telefoneString, String enderecoString, Filial objFilial,
+            String telefoneString, String enderecoString, String senha, Filial objFilial,
             ArrayList<Venda> listaFuncionario) {
-        super(cpfString, nomeString, emailString, telefoneString, enderecoString, objFilial);
-    }
-
-    public Gerente(String cpfString, String nomeString, String emailString,
-            String telefoneString, String enderecoString, Filial objFilial) {
-        super(cpfString, nomeString, emailString, telefoneString, enderecoString, objFilial);
+        super(cpfString, nomeString, emailString, telefoneString, enderecoString, senha, objFilial);
     }
 
     public ArrayList<Venda> listarFuncionario() {
