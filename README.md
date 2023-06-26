@@ -1,3 +1,5 @@
+![Logo do projeto](Logo.png)
+
 # Projeto-Final-MC322
 Projeto Final de MC322 - Ofertado pelo Ph.D. Esther Luna Colombini
 
