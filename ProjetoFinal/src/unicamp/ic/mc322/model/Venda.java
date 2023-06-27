@@ -2,11 +2,11 @@ package unicamp.ic.mc322.model;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
-
+import unicamp.ic.mc322.util.Util;
 
 public class Venda {
 
-	private Integer id;
+	private final Integer id;
 
 	private ArrayList<Produto> listaProdutos;
 
@@ -16,31 +16,40 @@ public class Venda {
 
 	private Cliente cliente;
 
-	private Funcionario funcionario;
-
-	private Produto produto;
-	
 	private Filial filial;
 
-
-	public Double calcDesconto() {
-		return null;
+	Venda(Funcionario atendente, LocalDate data, Cliente cliente, Filial filial) {
+		id = Util.criarId();
+		this.atendente = atendente;
+		this.data = data;
+		this.cliente = cliente;
+		listaProdutos = new ArrayList<>();
+		this.filial = filial;
 	}
 
 	public Double calcPreco() {
-		return null;
+		double preco = 0;
+		for (int k = 0; k < listaProdutos.size(); k++) {
+			preco += listaProdutos.get(k).getPrecoVenda();
+		}
+		preco = preco - preco * cliente.desconto();
+		return preco;
 	}
 
 	public Integer getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
-
 	public ArrayList<Produto> getListaProdutos() {
 		return listaProdutos;
+	}
+
+	public Filial getFilial() {
+		return filial;
+	}
+
+	public void setFilial(Filial filial) {
+		this.filial = filial;
 	}
 
 	public void setListaProdutos(ArrayList<Produto> listaProdutos) {
@@ -71,20 +80,12 @@ public class Venda {
 		this.cliente = cliente;
 	}
 
-	public Funcionario getFuncionario() {
-		return funcionario;
+	public ArrayList<Produto> getListaProduto() {
+		return listaProdutos;
 	}
 
-	public void setFuncionario(Funcionario funcionario) {
-		this.funcionario = funcionario;
-	}
-
-	public Produto getProduto() {
-		return produto;
-	}
-
-	public void setProduto(Produto produto) {
-		this.produto = produto;
+	public void setProduto(ArrayList<Produto> listaProdutos) {
+		this.listaProdutos = listaProdutos;
 	}
 
 }

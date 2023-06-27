@@ -12,6 +12,14 @@ public class Fornecedor {
 
 	private String endereco;
 
+	public Fornecedor(String cnpj, String nome, String email, String telefone, String endereco) {
+		this.cnpj = cnpj;
+		this.nome = nome;
+		this.email = email;
+		this.telefone = telefone;
+		this.endereco = endereco;
+	}
+
 	public String getCnpj() {
 		return cnpj;
 	}
@@ -51,6 +59,5 @@ public class Fornecedor {
 	public void setEndereco(String endereco) {
 		this.endereco = endereco;
 	}
-
 
 }
