@@ -198,9 +198,21 @@ public class Filial {
 		}
 		return produto;
 	}
-	
-	
-	
+
+	public int quantidadeDisponivelProduto(Produto produto){
+		//informa a quantidade de produtos disponiveis
+		int quantidade = 0;
+		
+		for(Produto produto_aux : this.listarProdutos()){
+			if(produto_aux.equals(produto)){
+				quantidade += produto_aux.getQuantidade();
+			}
+		}
+
+		return quantidade;
+	}
+
+
 	
 }
 
