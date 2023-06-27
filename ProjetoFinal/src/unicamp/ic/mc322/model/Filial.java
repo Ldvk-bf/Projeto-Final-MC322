@@ -182,4 +182,26 @@ public class Filial {
 		}
 		return clienteDoMes;
 	}
+
+	public Produto produtoMaisVendido(){
+
+		Produto produto = null;
+		int qntVendas = 0;
+
+		for (Venda venda_aux : listarVendas()){
+			//itera em todas as vendas e encontra o produto que foi mais comprado
+			for(Produto produto_aux : venda_aux.getListaProdutos()){
+				if(produto_aux.getQuantidade() > qntVendas){
+					produto = produto_aux;
+				}
+			}
+		}
+		return produto;
+	}
+	
+	
+	
+	
 }
+
+
