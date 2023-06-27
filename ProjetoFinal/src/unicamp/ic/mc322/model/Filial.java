@@ -182,5 +182,4 @@ public class Filial {
 		}
 		return clienteDoMes;
 	}
-
 }
