@@ -716,8 +716,8 @@ public class FrmListaEmpresas extends javax.swing.JFrame {
 
         private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btnSalvarActionPerformed
                 boolean naoExiste = true;
-                if (!txtCNPJ.getText().equals("  .   .   /    -  ") && !txtCPF.getText().equals("")
-                                && !txtTelefone.getText().equals("   .   .   -  ")
+                if (!txtCNPJ.getText().equals("  .   .   /    -  ") && !txtCPF.getText().equals("   .   .   -  ")
+                                && !txtTelefone.getText().equals("(  )       -    ")
                                 && !txtNome.getText().equals("") && !txtNomeDono.getText().equals("")
                                 && !txtSenha.getText().equals("")) {
                         for (Empresa e : Main.listaEmpresas) {
@@ -726,7 +726,7 @@ public class FrmListaEmpresas extends javax.swing.JFrame {
                                         e.setNome(txtNome.getText());
                                         e.setCnpj(txtCNPJ.getText());
                                         e.getDono().setNome(txtNomeDono.getText());
-                                        e.getDono().setSenha(txtTelefone.getText());
+                                        e.getDono().setTelefone(txtTelefone.getText());
                                         e.getDono().setCpf(txtCPF.getText());
                                         e.getDono().setSenha(txtSenha.getText());
                                         naoExiste = false;
@@ -735,9 +735,8 @@ public class FrmListaEmpresas extends javax.swing.JFrame {
                         }
                         if (naoExiste) {
                                 Funcionario dono = new Gerente(txtCPF.getText(), txtNomeDono.getText(), null,
-                                                txtTelefone.getText(),
-                                                null, "Dono",
-                                                txtSenha.getText(), null, null);
+                                                txtTelefone.getText(), "Dono",
+                                                txtSenha.getText(), null);
                                 Empresa objEmpresa = new Empresa(txtCNPJ.getText(), txtNome.getText(), dono);
                                 Main.usuarios.add(dono);
                                 Main.listaEmpresas.add(objEmpresa);
@@ -824,7 +823,7 @@ public class FrmListaEmpresas extends javax.swing.JFrame {
                         public void run() {
                                 new FrmListaEmpresas(
                                                 new Gerente("07150760279", "Ludivik", "Ludivk@gmail.com", "92996140802",
-                                                                "Rua lindomar", "Administrador", "123", null, null))
+                                                                "Administrador", "123", null))
                                                 .setVisible(true);
                         }
                 });

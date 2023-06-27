@@ -409,8 +409,8 @@ public class FrmListaAuth extends javax.swing.JFrame {
                 }
             }
             if (naoExiste) {
-                Gerente objGerente = new Gerente(txtLogin.getText(), null, null, null, null, "Administrador",
-                        txtSenha.getText(), null, null);
+                Gerente objGerente = new Gerente(txtLogin.getText(), null, null, null, "Administrador",
+                        txtSenha.getText(), null);
                 Main.usuarios.add(objGerente);
                 administradores.add(objGerente);
             }
@@ -464,7 +464,7 @@ public class FrmListaAuth extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new FrmListaAuth(new Gerente(null, "Ludivik", null, null, null, null, null, null, null))
+                new FrmListaAuth(new Gerente(null, "Ludivik", null, null, null, null, null))
                         .setVisible(true);
             }
         });

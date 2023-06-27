@@ -8,7 +8,7 @@ public class Vendedor extends Funcionario {
 
     public Vendedor(String cpfString, String nomeString, String emailString,
             String telefoneString, String enderecoString, String senha, Filial objFilial) {
-        super(cpfString, nomeString, emailString, telefoneString, enderecoString, "Vendedor", senha, objFilial);
+        super(cpfString, nomeString, emailString, telefoneString, "Vendedor", senha, objFilial);
     }
 
     public ArrayList<Venda> listarVendas() {

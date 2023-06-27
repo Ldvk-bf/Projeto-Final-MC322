@@ -19,7 +19,7 @@ public abstract class Funcionario {
         private Filial filial;
 
         public Funcionario(String cpfString, String nomeString, String emailString,
-                        String telefoneString, String enderecoString, String cargo, String senha, Filial objFilial) {
+                        String telefoneString, String cargo, String senha, Filial objFilial) {
                 this.cpf = cpfString;
                 this.nome = nomeString;
                 this.email = emailString;
@@ -71,7 +71,7 @@ public abstract class Funcionario {
                 return cpf;
         }
 
-        public void setCpf(String Cpf) {
+        public void setCpf(String cpf) {
                 this.cpf = cpf;
         }
 

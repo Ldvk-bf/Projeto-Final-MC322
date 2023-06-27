@@ -43,15 +43,17 @@ public class FrmMenu extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        //ImageIcon icon = new ImageIcon(getClass().getResource("/unicamp/ic/mc322/imagens/Fundo.jpeg"));
+        // ImageIcon icon = new
+        // ImageIcon(getClass().getResource("/unicamp/ic/mc322/imagens/Fundo.jpeg"));
 
-        //Image image = icon.getImage();
-        painel_desktop = new javax.swing.JDesktopPane(){
-            public void paintComponent(Graphics g){
-                //g.drawImage(image, 0,0, getWidth(),getHeight(),this);
+        // Image image = icon.getImage();
+        painel_desktop = new javax.swing.JDesktopPane() {
+            public void paintComponent(Graphics g) {
+                // g.drawImage(image, 0,0, getWidth(),getHeight(),this);
             }
         };
         jPanel1 = new javax.swing.JPanel();
@@ -59,7 +61,7 @@ public class FrmMenu extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         lblNomeUsuario = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu7 = new javax.swing.JMenu();
+        jmnPrincipal = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Sistema de Controle de Vendas");
@@ -67,6 +69,7 @@ public class FrmMenu extends javax.swing.JFrame {
             public void windowActivated(java.awt.event.WindowEvent evt) {
                 formWindowActivated(evt);
             }
+
             public void windowOpened(java.awt.event.WindowEvent evt) {
                 formWindowOpened(evt);
             }
@@ -88,74 +91,75 @@ public class FrmMenu extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 999, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblNomeUsuario)
-                .addGap(81, 81, 81))
-        );
+                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addGap(14, 14, 14)
+                                .addComponent(jLabel3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 999,
+                                        Short.MAX_VALUE)
+                                .addComponent(jLabel1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lblNomeUsuario)
+                                .addGap(81, 81, 81)));
         jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel3))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(28, 28, 28)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblNomeUsuario)
-                            .addComponent(jLabel1))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addContainerGap()
+                                                .addComponent(jLabel3))
+                                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addGap(28, 28, 28)
+                                                .addGroup(jPanel1Layout
+                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                                        .addComponent(lblNomeUsuario)
+                                                        .addComponent(jLabel1))))
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
 
         painel_desktop.setLayer(jPanel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout painel_desktopLayout = new javax.swing.GroupLayout(painel_desktop);
         painel_desktop.setLayout(painel_desktopLayout);
         painel_desktopLayout.setHorizontalGroup(
-            painel_desktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+                painel_desktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING,
+                                javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                Short.MAX_VALUE));
         painel_desktopLayout.setVerticalGroup(
-            painel_desktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painel_desktopLayout.createSequentialGroup()
-                .addContainerGap(567, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
+                painel_desktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING,
+                                painel_desktopLayout.createSequentialGroup()
+                                        .addContainerGap(567, Short.MAX_VALUE)
+                                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)));
 
         jMenuBar1.setBackground(new java.awt.Color(217, 217, 217));
 
-        jMenu7.setText("Sair");
-        jMenu7.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jMenu7.addMouseListener(new java.awt.event.MouseAdapter() {
+        jmnPrincipal.setText("Sair");
+        jmnPrincipal.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        jmnPrincipal.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jMenu7MouseClicked(evt);
+                jmnPrincipalMouseClicked(evt);
             }
         });
-        jMenu7.addActionListener(new java.awt.event.ActionListener() {
+        jmnPrincipal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenu7ActionPerformed(evt);
+                jmnPrincipalActionPerformed(evt);
             }
         });
-        jMenuBar1.add(jMenu7);
+        jMenuBar1.add(jmnPrincipal);
 
         setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(painel_desktop)
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(painel_desktop));
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(painel_desktop)
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(painel_desktop));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -211,14 +215,14 @@ public class FrmMenu extends javax.swing.JFrame {
 
         FrmCadastroClientePJ frm1 = new FrmCadastroClientePJ();
         FrmCadastroClientePF frm12 = new FrmCadastroClientePF();
-        FrmCadastroFornecedor frm2 = new FrmCadastroFornecedor();
-        FrmCadastroFuncionario frm3 = new FrmCadastroFuncionario();
+        FrmCadastroFornecedor frm2 = new FrmCadastroFornecedor(this.func);
+        FrmCadastroFuncionario frm3 = new FrmCadastroFuncionario(this.func);
         FrmCadastroProdutos frm4 = new FrmCadastroProdutos();
 
         FrmConsultaClientePF frm5 = new FrmConsultaClientePF();
         FrmConsultaClientePJ frm52 = new FrmConsultaClientePJ();
         FrmConsultaFornecedor frm6 = new FrmConsultaFornecedor();
-        FrmConsultaFuncionario frm7 = new FrmConsultaFuncionario();
+        FrmConsultaFuncionario frm7 = new FrmConsultaFuncionario(this.func);
         FrmConsultaProdutos frm8 = new FrmConsultaProdutos();
 
         FrmVendas frm10 = new FrmVendas();
@@ -312,7 +316,7 @@ public class FrmMenu extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
-            new FrmMenu(new Gerente("07150760279", "Ludivik", null, null, null, "Gerente", null, null, null))
+            new FrmMenu(new Gerente("07150760279", "Ludivik", null, null, "Gerente", null, null))
                     .setVisible(true);
         });
     }
@@ -328,7 +332,7 @@ public class FrmMenu extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JMenu jMenu7;
+    private javax.swing.JMenu jmnPrincipal;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblNomeUsuario;
