@@ -7,6 +7,7 @@ package unicamp.ic.mc322.view.cadastro;
 
 import javax.swing.JMenuItem;
 
+import unicamp.ic.mc322.main.Main;
 import unicamp.ic.mc322.model.AdmEstoque;
 import unicamp.ic.mc322.model.Funcionario;
 import unicamp.ic.mc322.model.Gerente;
@@ -373,6 +374,7 @@ public class FrmCadastroFuncionario extends javax.swing.JFrame {
                 }
 
                 funcionarioLogado.getFilial().addFuncionario(objFuncionario);
+                Main.usuarios.add(objFuncionario);
                 System.out.println(funcionarioLogado.getFilial().listarFuncionario().size());
 
                 txtCel.setText("");

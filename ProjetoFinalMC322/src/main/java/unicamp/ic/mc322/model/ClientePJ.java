@@ -8,7 +8,7 @@ public class ClientePJ extends Cliente {
 
     private Integer qntFuncionarios;
 
-    ClientePJ(String cadastroPessoa, String nome, LocalDate dataFundacao, Integer qntFuncionarios) {
+    public ClientePJ(String cadastroPessoa, String nome, LocalDate dataFundacao, Integer qntFuncionarios) {
         super(cadastroPessoa, nome);
         this.dataFundacao = dataFundacao;
         this.qntFuncionarios = qntFuncionarios;

@@ -1,7 +1,8 @@
 package unicamp.ic.mc322.model;
+
 import java.util.ArrayList;
 
-abstract class Cliente {
+public abstract class Cliente {
 
 	private final String cadastroPessoa;
 
@@ -9,7 +10,7 @@ abstract class Cliente {
 
 	private ArrayList<Venda> listaCompras;
 
-	Cliente(String cadastroPessoa , String nome){
+	Cliente(String cadastroPessoa, String nome) {
 		this.cadastroPessoa = cadastroPessoa;
 		this.nome = nome;
 		listaCompras = new ArrayList<>();
@@ -18,7 +19,6 @@ abstract class Cliente {
 	public int qntdCompras() {
 		return listaCompras.size();
 	}
-
 
 	public String getCadastroPessoa() {
 		return cadastroPessoa;

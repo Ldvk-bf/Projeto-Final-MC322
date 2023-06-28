@@ -1,6 +1,9 @@
 package unicamp.ic.mc322.model;
 
 import java.util.ArrayList;
+
+import javax.swing.JOptionPane;
+
 import unicamp.ic.mc322.util.Util;
 
 public class Filial {
@@ -32,46 +35,6 @@ public class Filial {
 		listaVendas = new ArrayList<>();
 	}
 
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
-	public String getEndereco() {
-		return endereco;
-	}
-
-	public void setEndereco(String endereco) {
-		this.endereco = endereco;
-	}
-
-	public void setListaClientes(ArrayList<Cliente> listaClientes) {
-		this.listaClientes = listaClientes;
-	}
-
-	public void setListaFuncionarios(ArrayList<Funcionario> listaFuncionarios) {
-		this.listaFuncionarios = listaFuncionarios;
-	}
-
-	public void setListaFornecedor(ArrayList<Fornecedor> listaFornecedor) {
-		this.listaFornecedor = listaFornecedor;
-	}
-
-	public void setlistaProdutos(ArrayList<Produto> listaProdutos) {
-		this.listaProdutos = listaProdutos;
-	}
-
-	public Integer getId() {
-		return id;
-	}
-
-	public void setListaVendas(ArrayList<Venda> listaVendas) {
-		this.listaVendas = listaVendas;
-	}
-
 	// Adiciona um funcionário na lista de funcionários da filial
 	public Boolean addFuncionario(Funcionario objFuncionario) {
 		if (listaFuncionarios.contains(objFuncionario)) {
@@ -87,6 +50,15 @@ public class Filial {
 		return listaFuncionarios;
 	}
 
+	public Boolean addCliente(Cliente objCliente) {
+		if (listaClientes.contains(objCliente)) {
+			return false;
+		} else {
+			listaClientes.add(objCliente);
+			return true;
+		}
+	}
+
 	// Retorna a lista de Clientes da Filial
 	public ArrayList<Cliente> listarClientes() {
 		return listaClientes;
@@ -97,18 +69,37 @@ public class Filial {
 		return listaFornecedor;
 	}
 
-	// Retorna a lista de Produtos da Filial
-	public ArrayList<Produto> listarProdutos() {
-		ArrayList<Produto> listProducts = new ArrayList<>();
-		for (int i = 0; i < listaProdutos.size(); i++) {
-			listProducts.add(listaProdutos.get(i));
+	public Fornecedor selecionarFornecedor(String nome) {
+		for (Fornecedor f : listaFornecedor) {
+			if (f.getNome().equals(nome)) {
+				JOptionPane.showMessageDialog(null, "Fornecedor encontrado!");
+				return f;
+			}
 		}
-		return listProducts;
+		return null;
 	}
 
-	// Retorna a lista de Produtos na listaProdutos
-	public ArrayList<Produto> listarProdutoslistaProdutos() {
+	public Boolean addProduto(Produto objProduto) {
+		if (listaProdutos.contains(objProduto)) {
+			return false;
+		} else {
+			listaProdutos.add(objProduto);
+			return true;
+		}
+	}
+
+	// Retorna a lista de Produtos da Filial
+	public ArrayList<Produto> listarProdutos() {
 		return listaProdutos;
+	}
+
+	public Produto selecionarProduto(String id) {
+		for (Produto f : listaProdutos) {
+			if (f.getId().equals(id)) {
+				return f;
+			}
+		}
+		return null;
 	}
 
 	// Retorna a lista de vendas da Filial
@@ -183,4 +174,43 @@ public class Filial {
 		return clienteDoMes;
 	}
 
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getEndereco() {
+		return endereco;
+	}
+
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
+	}
+
+	public void setListaClientes(ArrayList<Cliente> listaClientes) {
+		this.listaClientes = listaClientes;
+	}
+
+	public void setListaFuncionarios(ArrayList<Funcionario> listaFuncionarios) {
+		this.listaFuncionarios = listaFuncionarios;
+	}
+
+	public void setListaFornecedor(ArrayList<Fornecedor> listaFornecedor) {
+		this.listaFornecedor = listaFornecedor;
+	}
+
+	public void setlistaProdutos(ArrayList<Produto> listaProdutos) {
+		this.listaProdutos = listaProdutos;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setListaVendas(ArrayList<Venda> listaVendas) {
+		this.listaVendas = listaVendas;
+	}
 }

@@ -20,7 +20,6 @@ public class JMenuFrame {
     public static JMenu CreateMenuItem(String name, JFrame frame) {
         // instaciando um objeto da classe menu
         JMenu menu = new JMenu();
-        JOptionPane.showConfirmDialog(null, "Deu bom1");
 
         // Passando o nome e mudando a fonte desse menu
         menu.setText(name);

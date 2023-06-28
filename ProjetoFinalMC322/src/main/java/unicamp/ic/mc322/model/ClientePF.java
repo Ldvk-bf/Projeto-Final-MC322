@@ -11,7 +11,7 @@ public class ClientePF extends Cliente {
 
     private LocalDate dataNascimento;
 
-    ClientePF(String cadastroPessoa, String nome, String email, String telefone, String endereco,
+    public ClientePF(String cadastroPessoa, String nome, String email, String telefone, String endereco,
             LocalDate dataNascimento) {
         super(cadastroPessoa, nome);
         this.email = email;

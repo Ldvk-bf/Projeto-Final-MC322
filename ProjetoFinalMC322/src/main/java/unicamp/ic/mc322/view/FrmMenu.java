@@ -44,6 +44,7 @@ public class FrmMenu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
     // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -129,13 +130,14 @@ public class FrmMenu extends javax.swing.JFrame {
                 painel_desktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING,
                                 painel_desktopLayout.createSequentialGroup()
-                                        .addContainerGap(567, Short.MAX_VALUE)
+                                        .addContainerGap(525, Short.MAX_VALUE)
                                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE,
                                                 javax.swing.GroupLayout.DEFAULT_SIZE,
                                                 javax.swing.GroupLayout.PREFERRED_SIZE)));
 
         jMenuBar1.setBackground(new java.awt.Color(217, 217, 217));
 
+        jmnPrincipal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/unicamp/ic/mc322/imagens/Sair.png"))); // NOI18N
         jmnPrincipal.setText("Sair");
         jmnPrincipal.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jmnPrincipal.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -179,7 +181,9 @@ public class FrmMenu extends javax.swing.JFrame {
         int op;
         op = JOptionPane.showConfirmDialog(null, "Você tem certeza que desja sair?");
         if (op == 0) {
-            System.exit(0);
+            FrmLogin login = new FrmLogin();
+            login.setVisible(true);
+            this.dispose();
         }
     }// GEN-LAST:event_jmnPrincipalMouseClicked
 
@@ -213,17 +217,17 @@ public class FrmMenu extends javax.swing.JFrame {
         Fornecedores
                 .setIcon(new javax.swing.ImageIcon(getClass().getResource("/unicamp/ic/mc322/imagens/Fornecedor.png")));
 
-        FrmCadastroClientePJ frm1 = new FrmCadastroClientePJ();
-        FrmCadastroClientePF frm12 = new FrmCadastroClientePF();
+        FrmCadastroClientePJ frm1 = new FrmCadastroClientePJ(this.func);
+        FrmCadastroClientePF frm12 = new FrmCadastroClientePF(this.func);
         FrmCadastroFornecedor frm2 = new FrmCadastroFornecedor(this.func);
         FrmCadastroFuncionario frm3 = new FrmCadastroFuncionario(this.func);
-        FrmCadastroProdutos frm4 = new FrmCadastroProdutos();
+        FrmCadastroProdutos frm4 = new FrmCadastroProdutos(this.func);
 
-        FrmConsultaClientePF frm5 = new FrmConsultaClientePF();
-        FrmConsultaClientePJ frm52 = new FrmConsultaClientePJ();
-        FrmConsultaFornecedor frm6 = new FrmConsultaFornecedor();
+        FrmConsultaClientePF frm5 = new FrmConsultaClientePF(this.func);
+        FrmConsultaClientePJ frm52 = new FrmConsultaClientePJ(this.func);
+        FrmConsultaFornecedor frm6 = new FrmConsultaFornecedor(this.func);
         FrmConsultaFuncionario frm7 = new FrmConsultaFuncionario(this.func);
-        FrmConsultaProdutos frm8 = new FrmConsultaProdutos();
+        FrmConsultaProdutos frm8 = new FrmConsultaProdutos(this.func);
 
         FrmVendas frm10 = new FrmVendas();
         if (this.func instanceof Gerente) {
@@ -233,6 +237,7 @@ public class FrmMenu extends javax.swing.JFrame {
             Clientes.add(frm1.MenuItem());
             Clientes.add(frm12.MenuItem());
             Clientes.add(frm5.MenuItem());
+            Clientes.add(frm52.MenuItem());
 
             Fornecedores.add(frm2.MenuItem());
             Fornecedores.add(frm6.MenuItem());

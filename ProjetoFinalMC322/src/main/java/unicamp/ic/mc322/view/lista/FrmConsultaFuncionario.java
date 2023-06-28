@@ -61,6 +61,7 @@ public class FrmConsultaFuncionario extends javax.swing.JFrame {
         // <editor-fold defaultstate="collapsed" desc="Generated
         // <editor-fold defaultstate="collapsed" desc="Generated
         // <editor-fold defaultstate="collapsed" desc="Generated
+        // <editor-fold defaultstate="collapsed" desc="Generated
         // Code">//GEN-BEGIN:initComponents
         private void initComponents() {
 
@@ -79,6 +80,11 @@ public class FrmConsultaFuncionario extends javax.swing.JFrame {
                 addWindowStateListener(new java.awt.event.WindowStateListener() {
                         public void windowStateChanged(java.awt.event.WindowEvent evt) {
                                 formWindowStateChanged(evt);
+                        }
+                });
+                addWindowListener(new java.awt.event.WindowAdapter() {
+                        public void windowActivated(java.awt.event.WindowEvent evt) {
+                                formWindowActivated(evt);
                         }
                 });
 
@@ -225,12 +231,16 @@ public class FrmConsultaFuncionario extends javax.swing.JFrame {
                 setLocationRelativeTo(null);
         }// </editor-fold>//GEN-END:initComponents
 
+        private void formWindowActivated(java.awt.event.WindowEvent evt) {// GEN-FIRST:event_formWindowActivated
+                listar();
+        }// GEN-LAST:event_formWindowActivated
+
         private void formWindowStateChanged(java.awt.event.WindowEvent evt) {// GEN-FIRST:event_formWindowStateChanged
                 listar();
         }// GEN-LAST:event_formWindowStateChanged
 
         private void btnPesquisarActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btnPesquisarActionPerformed
-                // TODO add your handling code here:
+                listar();
         }// GEN-LAST:event_btnPesquisarActionPerformed
 
         private void tblFuncionarioMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_tblFuncionarioMouseClicked
