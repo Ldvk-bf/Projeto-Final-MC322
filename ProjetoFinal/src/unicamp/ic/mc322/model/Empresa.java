@@ -2,6 +2,10 @@ package unicamp.ic.mc322.model;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
 
 public class Empresa {
 
@@ -17,13 +21,21 @@ public class Empresa {
 
 	public Boolean criarFilial(Filial objFilial) {
 		boolean flag = false;
-
 		if (!listaFiliais.contains(objFilial)) {
 			listaFiliais.add(objFilial);
+			try(BufferedWriter br = new BufferedWriter(new FileWriter("Arquivos/Filial.csv",true))){
+				String arquivo = objFilial.toString().substring(0,objFilial.toString().length()-2);
+				br.write(arquivo);
+				br.write("\n");
+			}
+			catch(IOException e){
+				System.out.println("Houve um erro" + e);
+			}
 			flag = true;
 		}
 		return flag;// retorna falso caso ja exista uma filial na lista
 	}
+	
 
 	public boolean excluirFilial(Filial objFilial) {
 		boolean flag = false;

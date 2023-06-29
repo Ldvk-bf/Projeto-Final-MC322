@@ -211,6 +211,72 @@ public class Filial {
 
 		return quantidade;
 	}
+	
+	public String cpfFunc() {
+		String info = "";
+		if(listaFuncionarios.size()>1) {
+			for(int i = 0 ; i < listaFuncionarios.size()-1;i++) {
+				info += listaFuncionarios.get(i).getCpf() + "*";
+			}
+			info += listaFuncionarios.get(listaFuncionarios.size()-1).getCpf();
+		}
+		else if(listaFuncionarios.size() == 1) {
+			info += listaFuncionarios.get(0).getCpf();
+		}
+		return info;
+	}
+	
+	public String cnpjForn() {
+		String info = "";
+		if( listaFornecedor.size()>1) {
+			for(int i = 0 ; i < listaFornecedor.size()-1;i++) {
+				info += listaFornecedor.get(i).getCnpj() + "*";
+			}
+			info += listaFornecedor.get(listaFornecedor.size()-1).getCnpj();
+		}
+		else if(listaFornecedor.size() == 1) {
+			info += listaFornecedor.get(0).getCnpj();
+		}
+		return info;
+	}
+	
+	public String infoProduct() {
+		String info = "";
+		if( listaProdutos.size()>1) {
+			for(int i = 0 ; i < listaProdutos.size()-1;i++) {
+				info += listaProdutos.get(i).getNome() + "-";
+			}
+			info += listaProdutos.get(listaProdutos.size()-1).getNome();
+		}
+		else if(listaProdutos.size() == 1) {
+			info += listaProdutos.get(0).getNome();
+		}
+		return info;
+	}
+	
+	public String infoVenda() {
+		String info = "";
+		if( listaVendas.size()>1) {
+			for(int i = 0 ; i < listaVendas.size()-1;i++) {
+				info += listaVendas.get(i).getId() + "-";
+			}
+			info += listaVendas.get(listaVendas.size()-1).getId();
+		}
+		else if(listaVendas.size() == 1) {
+			info += listaVendas.get(0).getId();
+		}
+		return info;
+	}
+	
+	
+	
+	
+	
+	public String toString() {
+		String dados =  id + "," + nome + "," + endereco + "," + cpfFunc() + "," 
+		+ cnpjForn() + "," +  infoProduct() + "," + infoVenda() + "\n";
+		return dados;
+	}
 
 
 	
